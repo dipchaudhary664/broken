@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #212121;
+}
+.one {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.container {
+  width: 87%;
+  margin: auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.broken img {
+  width: 100%;
+  height: 65px;
+  filter: invert(1);
+}
+.header .navlink ul {
+  display: flex;
+}
+.header .navlink li {
+  margin: 0 30px;
+  font-size: 18px;
+}
+.header .navlink li a {
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+.line {
+  position: absolute;
+  top: 50px;
+  border: 1px solid tomato;
+  right: 0;
+  left: 120px;
+  width: 50px;
+  transition: 0.3s;
+}
+.header .navlink li a.active {
+  color: tomato;
+  font-weight: 500;
+}
+.one.scroll{
+    backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, .1);
+}
+
+/* section two */
+.two{
+    padding-top: 60px;
+}
+.twoContain {
+  display: flex;
+  justify-content: space-between;
+}
+.twoContain .left h1 {
+  margin-top: 100px;
+  font-size: 56px;
+  text-transform: capitalize;
+  color: tomato;
+}
+.twoContain .left p {
+    margin-top: 20px;
+  font-size: 18px;
+  color: white;
+}
+.twoContain .left p span {
+  font-weight: 600;
+  color: tomato;
+}
+.twoContain .right {
+  filter: drop-shadow(0 5px 15px rgb(213, 46, 46));
+}
+.twoContain .btn button {
+  margin-top: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  background-color: #30fe6c;
+  border-radius: 5px;
+  color: #222;
+  outline: none; /* Updated to 'outline' */
+  border: none; /* Updated to 'border' */
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.twoContain .btn a button::before {
+  content: ""; /* Updated from 'contain' */
+  position: absolute;
+  background-color: tomato;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: 0 0;
+  transition: 0.5s;
+  transform: scaleX(0);
+  transition-timing-function: cubic-bezier(0.3, 1.6, 0.4, 0.7);
+}
+
+.twoContain .btn button:hover::before {
+  transform: scaleX(1);
+}
+
+.twoContain .btn button:hover {
+  color: white;
+}
+/* section three */
+.three {
+  padding-top: 30px;
+}
+.three .twohead h1 {
+  font-size: 45px;
+  text-align: center;
+  margin: 5px 0;
+  color: white;
+}
+.three .twohead span {
+  color: tomato;
+}
+/* .three{
+    background-color: #353535;
+} */
+.threemoji {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  margin-top: 20px;
+}
+.threemoji img {
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  filter: drop-shadow(0 5px 15px rgb(255, 255, 255));
+}
+.threemoji .ones {
+  border: 2px solid #30fe6c;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1;
+  padding: 10px;
+}
+.threemoji .ones.active {
+  border-color: tomato;
+}
+.threemoji .ones:hover {
+  border-color: tomato;
+  box-shadow: 0 5px 15px rgb(255, 255, 255, 0.5);
+}
+.threedetails {
+  padding-bottom: 30px;
+}
+.threedetails .threecontains {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  border: 1px solid tomato;
+  padding: 20px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgb(245, 159, 144);
+  display: none;
+  animation: move 0.5s ease;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.threedetails .threecontains.active {
+  display: flex;
+}
+/* .threedetails .threecontains .left img{
+    width: 200px;
+} */
+.threedetails .threecontains .right p {
+  font-size: 25px;
+  margin-left: 50px;
+  color: white;
+}
+.threedetails .threecontains .right span {
+  color: tomato;
+}
